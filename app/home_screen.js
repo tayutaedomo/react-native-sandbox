@@ -25,6 +25,13 @@ type Props = {};
 export default class HomeScreen extends Component<Props> {
   static navigationOptions = {
     title: 'Home',
+    headerRight: (
+      <Button
+        onPress={() => alert('This is a button!')}
+        title="Info"
+        color="#000"
+      />
+    )
   };
 
   render() {
