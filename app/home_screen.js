@@ -11,7 +11,9 @@ import {
   StyleSheet,
   Text,
   Button,
-  View
+  TouchableOpacity,
+  View,
+  NativeModules
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -45,6 +47,10 @@ export default class HomeScreen extends Component<Props> {
           title="Go to Second Screen"
           onPress={() => this.props.navigation.navigate('Second')}
         />
+
+        <TouchableOpacity onPress={() => NativeModules.HelloWorld.say()}>
+          <Text>Say Hello</Text>
+        </TouchableOpacity>
       </View>
     );
   }
