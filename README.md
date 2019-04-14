@@ -10,6 +10,8 @@ Try react native
   - https://github.com/react-native-community/react-native-image-picker
 - react-native-image-crop-picker
   - https://github.com/ivpusic/react-native-image-crop-picker
+- async-storage
+  - https://github.com/react-native-community/react-native-async-storage
 - Sentry
   - https://sentry.io
   - https://github.com/getsentry/react-native-sentry
