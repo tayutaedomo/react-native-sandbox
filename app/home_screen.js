@@ -64,6 +64,11 @@ export default class HomeScreen extends Component<Props> {
           title="Go to Image Crop Picker Screen"
           onPress={() => this.props.navigation.navigate('ImageCropPicker')}
         />
+
+        <Button
+          title="Go to AsyncStore Screen"
+          onPress={() => this.props.navigation.navigate('AsyncStore')}
+        />
       </View>
     );
   }
