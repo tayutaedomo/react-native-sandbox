@@ -15,7 +15,6 @@ import {
   View,
   NativeModules
 } from 'react-native';
-import ImagePicker from 'react-native-image-picker';
 
 
 const instructions = Platform.select({
@@ -39,9 +38,6 @@ export default class HomeScreen extends Component<Props> {
     )
   };
 
-  open_image_picker() {
-    ImagePicker.showImagePicker({}, res => console.log(res));
-  }
 
   render() {
     return (
@@ -59,9 +55,10 @@ export default class HomeScreen extends Component<Props> {
           <Text>Say Hello</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => this.open_image_picker()}>
-          <Text>Open Image Picker</Text>
-        </TouchableOpacity>
+        <Button
+          title="Go to Image Picker Screen"
+          onPress={() => this.props.navigation.navigate('ImagePicker')}
+        />
       </View>
     );
   }
