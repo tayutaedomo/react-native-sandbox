@@ -16,12 +16,14 @@ import {
   NativeModules
 } from 'react-native';
 
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+
 
 type Props = {};
 export default class HomeScreen extends Component<Props> {
@@ -35,6 +37,7 @@ export default class HomeScreen extends Component<Props> {
       />
     )
   };
+
 
   render() {
     return (
@@ -51,6 +54,11 @@ export default class HomeScreen extends Component<Props> {
         <TouchableOpacity onPress={() => NativeModules.HelloWorld.say()}>
           <Text>Say Hello</Text>
         </TouchableOpacity>
+
+        <Button
+          title="Go to Image Picker Screen"
+          onPress={() => this.props.navigation.navigate('ImagePicker')}
+        />
       </View>
     );
   }
