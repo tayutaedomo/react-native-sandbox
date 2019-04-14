@@ -69,6 +69,11 @@ export default class HomeScreen extends Component<Props> {
           title="Go to AsyncStore Screen"
           onPress={() => this.props.navigation.navigate('AsyncStore')}
         />
+
+        <Button
+          title="Go to Sentry Screen"
+          onPress={() => this.props.navigation.navigate('Sentry')}
+        />
       </View>
     );
   }

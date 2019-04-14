@@ -6,6 +6,7 @@ import SecondScreen from './app/second_screen';
 import ImagePickerScreen from './app/image_picker_screen';
 import ImageCropPickerScreen from './app/image_crop_picker_screen';
 import AsyncStoreScreen from './app/async_store_screen';
+import SentryScreen from './app/sentry_screen';
 
 import { Sentry } from 'react-native-sentry';
 
@@ -18,7 +19,8 @@ const AppNavigator = createStackNavigator({
   Second:           SecondScreen,
   ImagePicker:      ImagePickerScreen,
   ImageCropPicker:  ImageCropPickerScreen,
-  AsyncStore:       AsyncStoreScreen
+  AsyncStore:       AsyncStoreScreen,
+  Sentry:           SentryScreen
 }, {
   initialRouteName: 'Home'
 });
