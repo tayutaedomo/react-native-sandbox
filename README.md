@@ -1,6 +1,20 @@
 # react-native-sandbox
 Try react native
 
+- react-native-navigation
+  - https://github.com/wix/react-native-navigation
+- Native Modules
+  - https://facebook.github.io/react-native/docs/native-modules-ios
+  - https://facebook.github.io/react-native/docs/native-modules-android
+- react-native-image-picker
+  - https://github.com/react-native-community/react-native-image-picker
+- react-native-image-crop-picker
+  - https://github.com/ivpusic/react-native-image-crop-picker
+- Sentry
+  - https://sentry.io
+  - https://github.com/getsentry/react-native-sentry
+
+
 ## Setup
 
 ### Homebrew, Nodebrew and Node.js
@@ -40,6 +54,11 @@ Install xcode
 
 ### Android Studio, Android SDK and Platform-Tools
 Install Android Studio, Android SDK and Platform-Tool.
+
+```
+$ echo 'ANDROID_HOME="<your android adk path>"' >> ~/.bashrc
+```
+
 
 ### Project
 ```
