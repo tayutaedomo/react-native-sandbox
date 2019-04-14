@@ -15,6 +15,8 @@ import {
   View,
   NativeModules
 } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,6 +24,7 @@ const instructions = Platform.select({
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+
 
 type Props = {};
 export default class HomeScreen extends Component<Props> {
@@ -35,6 +38,10 @@ export default class HomeScreen extends Component<Props> {
       />
     )
   };
+
+  open_image_picker() {
+    ImagePicker.showImagePicker({}, res => console.log(res));
+  }
 
   render() {
     return (
@@ -50,6 +57,10 @@ export default class HomeScreen extends Component<Props> {
 
         <TouchableOpacity onPress={() => NativeModules.HelloWorld.say()}>
           <Text>Say Hello</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => this.open_image_picker()}>
+          <Text>Open Image Picker</Text>
         </TouchableOpacity>
       </View>
     );
