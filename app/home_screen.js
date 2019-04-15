@@ -15,6 +15,7 @@ import {
   View,
   NativeModules
 } from 'react-native';
+import Config from 'react-native-config';
 
 
 const instructions = Platform.select({
@@ -74,6 +75,8 @@ export default class HomeScreen extends Component<Props> {
           title="Go to Sentry Screen"
           onPress={() => this.props.navigation.navigate('Sentry')}
         />
+
+        <Text>Config.ENV: { Config.ENV }</Text>
       </View>
     );
   }
